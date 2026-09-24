@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Aplicaciones locales
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +127,11 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+# Modelo de usuario personalizado
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# Archivos multimedia (imágenes de perfil, logos, etc.)
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
